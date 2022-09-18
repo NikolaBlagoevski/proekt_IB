@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="default">
+
+    <class>mk.ukim.bazi.aplikacija.model.BookEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.MyorderEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.OnlineBookShopHasBooksEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.OnlineBookShopHasOrdersEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.OnlineBookShopHasUserAccEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.OnlineBookShopsEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.OrderContainsBooksEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.ShoppingCarHasBookEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.ShoppingCartEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.UserAccountEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.ShowAvailableBooksEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.ShowBooksEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.ShowOrderEntity</class>
+    <class>mk.ukim.bazi.aplikacija.model.ShowShoppingCartEntity</class>
+    <properties>
+      <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/postgres"/>
+      <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+      <property name="hibernate.connection.user" value="user"/>
+      <property name="hibernate.connection.password" value="password"/>
+      <property name="hibernate.show_sql" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shopping cart</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<p></p>
+<div>
+    <span>Available books</span>
+    <ol>
+    <li th:each="book: ${Show_available_books}" th:text="${book.getBookName()}"></li>
+    </ol>
+</div>
+
+<div>
+    <span>All books</span>
+    <ol>
+        <li th:each="book: ${Show_books}" th:text="${book.getBookName()}"></li>
+    </ol>
+</div>
+
+
+<div>
+    <span>Sum to pay for order</span>
+    <ol>
+        <li th:each="order: ${Oreders}" th:text="${order.getAmountToPay()}" >
+       <!-- <li></li>--><!--
+            <th:block th:text="${order.getAmountToPay()}"></th:block>
+            <th:block th:text="${order.getDate()}"></th:block>
+            <th:block th:text="${order.getDeliveryAddress()}"></th:block>-->
+        </li><!--
+        <tr th:each="prod : ${products}">
+            <td th:text="${prod.getName()}"></td>
+            <td th:text="${prod.getPrice()}"></td>
+            <td th:text="${prod.getQuantity()}"></td></tr>-->
+    </ol>
+
+</div>
+</body>
+</html>
